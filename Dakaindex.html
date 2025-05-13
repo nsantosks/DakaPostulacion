@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postulación Nestor Santos - Inteligencia Comercial para Tiendas Daka</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+        :root {
+            --primary-color: #163E73; /* Azul Daka Principal */
+            --secondary-color: #F2B705; /* Amarillo Daka Principal */
+            --accent-color-light: #F2CB05; /* Amarillo Daka Claro */
+            --bg-color: #F2EFC4; /* Crema/Beige Daka Fondo */
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0; /* Un gris neutro o un derivado claro de los azules */
+            
+            --text-color: #333333;
+            --light-text-color: #555555;
+            --header-text-color: #F2EFC4; /* Texto claro para fondos oscuros */
+
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            --darker-primary-color: #183F8C; /* Azul Daka más oscuro/alternativo para hovers */
+            --highlight-bg-color: rgba(242, 183, 5, 0.15); /* Amarillo Daka muy claro para resaltar */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 0 20px; /* Padding lateral para pantallas pequeñas */
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background-color: var(--primary-color); /* Azul Daka para el header */
+            color: var(--header-text-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        header img.profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--header-text-color); /* Borde con color de texto del header */
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            font-weight: 400;
+            color: var(--accent-color-light); /* Amarillo claro Daka para el subtítulo */
+            margin-top: 0;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            box-shadow: var(--hover-shadow);
+        }
+
+        .section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            color: var(--secondary-color); /* Amarillo Daka para títulos de sección */
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color); /* Borde inferior amarillo */
+            display: inline-block;
+        }
+
+        .section p, .section ul li {
+            font-size: 1.05em;
+            color: var(--light-text-color);
+            margin-bottom: 1em;
+        }
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .section strong {
+            font-weight: 600;
+            color: var(--primary-color); /* Texto fuerte en Azul Daka */
+        }
+
+        .highlight {
+            background-color: var(--highlight-bg-color); /* Amarillo muy claro para resaltar */
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--primary-color); /* Texto del highlight en azul para contraste */
+        }
+
+        .dashboard-showcase {
+            text-align: center;
+        }
+
+        .dashboard-showcase img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid var(--border-color);
+            border-radius: 8px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dashboard-showcase img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(242, 183, 5, 0.4); /* Sombra con tono amarillo Daka */
+        }
+
+        .dashboard-caption {
+            font-size: 0.95em;
+            font-style: italic;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color); /* Botón Azul Daka */
+            color: var(--header-text-color); /* Texto claro */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            margin: 5px; /* Espacio entre botones */
+        }
+
+        .cta-button:hover {
+            background-color: var(--darker-primary-color); /* Azul Daka más oscuro al pasar el mouse */
+            transform: translateY(-2px);
+        }
+        
+        .company-info {
+            background-color: #fdfdfb; /* Un fondo ligeramente diferente para esta sección, casi blanco */
+            border-left: 5px solid var(--secondary-color); /* Borde lateral Amarillo Daka */
+        }
+        .company-info h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color); /* Titulo interno en Azul Daka */
+            font-size: 1.3em;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9em;
+            color: var(--light-text-color);
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            header h2 {
+                font-size: 1.2em;
+            }
+            .section h3 {
+                font-size: 1.5em;
+            }
+            .section p {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            header img.profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+             header h1 {
+                font-size: 1.8em;
+            }
+            header h2 {
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://www.linkedin.com/in/ingnsantos/" target="_blank" title="Ver Perfil de Nestor Santos en LinkedIn">
+                <img src="https://www.dropbox.com/scl/fi/ssmwr3w27v0e50tdzicgm/ProfileV01.jpg?rlkey=6rio5ubg2k4o0kqqwux8ug2dp&dl=1" alt="Foto de Perfil Nestor Santos" class="profile-pic">
+            </a>
+            <h1>Nestor Santos</h1>
+            <h2>Especialista en Inteligencia de Negocios | Analista de Datos</h2>
+        </header>
+
+        <div class="section" id="introduction">
+            <h3>Mi Propuesta de Valor para Tiendas Daka</h3>
+            <p>Soy un profesional del análisis de datos con <strong>más de 5 años de experiencia</strong> en la transformación de datos complejos en insights accionables. Mi objetivo es aportar valor tangible al departamento de Inteligencia Comercial de Tiendas Daka, alineándome con su misión de ser la <span class="highlight">empresa líder de Venezuela en electrodomésticos</span> y ayudarles a optimizar su <span class="highlight">excelente servicio y oferta</span>, mejorando la relación precio-valor y la calidad de vida de sus clientes mediante el poder de los datos.</p>
+        </div>
+
+        <div class="section" id="analytical-skills">
+            <h3>Capacidad Analítica y Dominio Técnico Aplicado al Retail</h3>
+            <p>Mi dominio de herramientas como <strong>Power BI, SQL, Excel Avanzado</strong>, y mi creciente interés en Python para análisis de datos, son fundamentales para extraer valor de los datos de ventas, inventario, comportamiento del cliente y tendencias del mercado de electrodomésticos. Puedo analizar patrones de compra, preferencias de marcas, efectividad de promociones y optimización de surtido, convirtiendo grandes volúmenes de información en <span class="highlight">soluciones que potencien la estrategia comercial y la satisfacción del cliente</span> que Tiendas Daka ofrece.</p>
+            <p>Con experiencia en el desarrollo de KPIs y dashboards interactivos, puedo generar reportes que faciliten la toma de decisiones estratégicas, permitiendo a Tiendas Daka <span class="highlight">ofrecer lo que sus clientes requieren en un solo lugar</span> de manera más eficiente.</p>
+        </div>
+
+        <div class="section company-info" id="company-alignment">
+            <h3>Alineación con la Visión de Tiendas Daka</h3>
+            <p>Me identifico profundamente con la cultura y los objetivos de Tiendas Daka. Su enfoque en ser líderes, ofrecer <span class="highlight">las mejores marcas</span> y prestar un <span class="highlight">excelente servicio</span> son motores que también impulsan mi desarrollo profesional.</p>
+            
+            <p>A través de la inteligencia comercial, puedo contribuir a identificar tendencias de consumo, optimizar la oferta de productos para asegurar una <span class="highlight">relación precio-valor que satisfaga las necesidades del cliente</span> y asegurar que el servicio y la disponibilidad de productos contribuyan a mejorar su calidad de vida.</p>
+
+            <p>Dentro de mis principales valores destacan la <strong>integridad</strong> en el manejo de datos, la <strong>transparencia</strong> en los hallazgos y la <strong>innovación</strong> constante en las metodologías de análisis. Creo firmemente que estos principios son la base para fortalecer la posición de liderazgo de Tiendas Daka.</p>
+        </div>
+        
+        <div class="section" id="contribution">
+            <h3>Contribución Estratégica a la Inteligencia Comercial</h3>
+            <p>Como parte del equipo de Inteligencia Comercial de Tiendas Daka, mi enfoque será:</p>
+            <ul>
+                <li>Desarrollar y mantener dashboards que proporcionen <span class="highlight">visibilidad en tiempo real</span> del rendimiento de ventas, márgenes y rotación de inventario.</li>
+                <li>Identificar oportunidades de <span class="highlight">optimización de surtido y estrategias de precios</span> a través del análisis de datos históricos y tendencias del mercado.</li>
+                <li>Colaborar en la creación de modelos para <span class="highlight">segmentación de clientes y predicción de demanda</span>, personalizando ofertas y mejorando la planificación.</li>
+                <li>Apoyar a los equipos de compras y marketing con <span class="highlight">insights basados en datos</span> para mejorar la toma de decisiones y la efectividad de las campañas.</li>
+                <li>Fomentar una cultura de datos, promoviendo la <span class="highlight">innovación continua</span> en los procesos y servicios de Tiendas Daka.</li>
+            </ul>
+        </div>
+
+        <div class="section dashboard-showcase" id="dashboard-example">
+            <h3>Ejemplo de Dashboard Interactivo (Adaptable a KPIs de Retail)</h3>
+            <p>A continuación, una muestra de un tablero que he construido (datos con fines ilustrativos, fácilmente adaptable al análisis de ventas, inventario y KPIs de Tiendas Daka):</p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNzE1MGYxMGMtMTU0MC00NGI5LWE5NTUtZTg0MmVkMjQyZDNjIiwidCI6IjZmMGJiNzJmLTUzNzctNGRkZi05MzZhLWI2YzcyYmYyMWFlMiIsImMiOjF9" target="_blank" title="Ver Tablero Interactivo en Power BI">
+                <img src="https://www.dropbox.com/scl/fi/7vqkc2gsgy3xizy0agx59/CapturaDashboard.JPG?rlkey=kzm11w5zkzinvlm5xsets3t1z&dl=1" alt="Vista previa del Tablero Power BI - Ejemplo Aplicable a Retail">
+            </a>
+            <p class="dashboard-caption">Haga clic en la imagen para explorar el tablero interactivo en Power BI. Este tipo de visualización puede adaptarse para mostrar indicadores clave de rendimiento para el sector electrodomésticos.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h3>Oportunidad de Entrevista</h3>
+            <p>Agradecería enormemente la oportunidad de una entrevista para discutir en detalle cómo mis habilidades y experiencia en inteligencia de negocios pueden fortalecer el equipo de Tiendas Daka y contribuir a alcanzar sus objetivos estratégicos en el mercado venezolano.</p>
+            <a href="https://www.linkedin.com/in/ingnsantos/" target="_blank" class="cta-button">
+                Ver mi Perfil en LinkedIn
+            </a>
+            <a href="https://drive.google.com/file/d/1TCWStkbjscmZTLdKIdv5mP62AP_GUKyA/view?usp=drive_link" target="_blank" class="cta-button">
+                Descargar CV Actualizado
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Nestor Santos. Todos los derechos reservados.</p>
+        <p>Diseñado como parte de mi postulación para el departamento de Inteligencia Comercial en Tiendas Daka.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
